@@ -1,0 +1,30 @@
+package interfaceTest03;
+
+interface InterA{
+	void methodA();
+}
+
+interface InterB{
+	void methodA();
+}
+
+class ClassC implements InterA, InterB{
+
+	@Override
+	public void methodA() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}
+
+
+
+
+
+public class Main2 {
+	public static void main(String[] args) {
+		
+	}
+}

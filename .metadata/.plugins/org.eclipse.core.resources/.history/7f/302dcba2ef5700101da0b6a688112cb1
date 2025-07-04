@@ -1,0 +1,36 @@
+package ex03_강버들;
+
+public interface Main {
+	public static void main(String[] args) {
+		//대상 문자열
+		String nation = "Korea,Spain,Germany,America";
+
+		//인터페이스 객체 생성
+		StringInter sfi = new StringInter() {
+
+			@Override
+			public String modify(String str) {
+				String returnS = "";
+				for (int i = 0; i < str.length(); i++) {
+					char c = str.charAt(i);
+					returnS += c == ',' ? "!" : c;
+				}
+				return returnS;
+			}
+
+		};
+		System.out.println(sfi.modify(nation));
+
+		StringInter sf = (str) -> {
+			String returnS = "";
+			for (int i = 0; i < str.length(); i++) {
+				char c = str.charAt(i);
+				returnS += c == ',' ? "!" : c;
+			}
+			return returnS;
+		};
+		
+		System.out.println(sf.modify(nation));
+		
+	}
+}

@@ -1,0 +1,5 @@
+package lambdaTask;
+@FunctionalInterface
+public interface CombInter {
+
+}

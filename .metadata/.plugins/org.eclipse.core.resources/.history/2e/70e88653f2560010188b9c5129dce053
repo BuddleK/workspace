@@ -1,0 +1,18 @@
+package interfaceTest01;
+
+public class Main {
+	public static void main(String[] args) {
+		//Music 인터페이스를 만들고 각 메소드를 호출하기
+		
+		//음악 재생 프로그램
+		//부모는 Music 인터페이스
+		//구현되지 않은 mode 메소드 만들기
+		
+		//자식 클래스 Ballad, Hiphop, Rock 클래스
+		//발라드 클래스
+		// 발라드 모드를 출려갛는 mode 구현
+		// 오직 발라드만 실행 출력하는 onlyBallad 메소드 만들기
+		
+		//힙합 클래스
+	}
+}

@@ -1,0 +1,42 @@
+package review;
+
+public class Person {
+	// alt + shift + a : 그리드 모드
+	//필드
+	private String name;
+	private int age;
+	private String birth;
+	
+	//생성자
+	//생성자는 이름을 갖고 있는 생성자
+	public Person(String name) {
+		super();
+		this.name = name;
+	}
+	
+	//게터 세터 (셋네임 제외)
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getBirth() {
+		return birth;
+	}
+
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	void introduce() {
+		System.out.println("이름은 " + this.name + "이고, 나이는 " + this.age + "살입니다.");
+	}
+	
+}

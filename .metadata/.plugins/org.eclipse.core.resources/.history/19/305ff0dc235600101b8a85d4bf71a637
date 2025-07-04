@@ -1,0 +1,66 @@
+package ex05_강버들;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int people = 0;
+		String name = "", major = "";
+		int java = 0, dbms = 0, html = 0;
+		
+		Major m = null;
+
+		while (people == 0) {
+			System.out.print("몇 명의 학생을 입력하시겠습니까? ");
+			people = sc.nextInt();
+			sc.nextLine();
+			if (people <= 0) {
+				System.out.println("잘못 입력한 것 같습니다. 다시 입력해 주세요.");
+				people = 0;
+				continue;
+			}
+		}
+		
+		Student[] sArr = new Student[people];
+
+		for (int i = 0; i < people; i++) {
+			System.out.printf("[%d번째 학생 정보 입력]\n", i + 1);
+
+			System.out.print("이름 : ");
+			name = sc.nextLine();
+		
+			System.out.print("전공(COMPUTER_SCIENCE, CYBER_SECURITY, ARTIFICIAL_INTELLIGENCE) : ");
+			major = sc.nextLine();
+			System.out.print("Java 점수 : ");
+			java = sc.nextInt();
+			sc.nextLine();
+			System.out.print("DBMS 점수 : ");
+			dbms = sc.nextInt();
+			sc.nextLine();
+			System.out.print("HTML 점수 : ");
+			html = sc.nextInt();
+			sc.nextLine();
+			System.out.println();
+			
+			if(major.equals("COMPUTER_SCIENCE"))
+			
+			m = Major.COMPUTER_SCIENCE;
+			
+			sArr[i] = new Student(name, java, dbms, html, m);
+			
+		}
+		
+		System.out.println("===== 성적 출력 =====");
+		
+		for(int i = 0;i < people ;i++) {
+			System.out.printf("%s님의 전공은 %s입니다.\n", sArr[i].name, sArr[i].getMajor());
+			System.out.println("총점 : " + sArr[i].getTotalScore());
+			System.out.println("평균 : " + sArr[i].getAverageScore());
+			System.out.println();
+		}
+
+		sc.close();
+	}
+}

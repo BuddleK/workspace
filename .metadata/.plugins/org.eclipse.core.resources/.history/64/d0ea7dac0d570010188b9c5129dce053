@@ -1,0 +1,5 @@
+package interfaceTest04;
+
+public class ClassC implements Inter1, Inter2, Inter3{
+
+}

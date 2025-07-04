@@ -1,0 +1,17 @@
+package ex05_강버들;
+
+public enum Major {
+	
+	COMPUTER_SCENCE, CYBER_SECURITY, ARTIFICAL_INTELLIGENCE;
+	
+		
+	
+	Major() {
+		
+	}
+	
+	
+
+	
+	
+}

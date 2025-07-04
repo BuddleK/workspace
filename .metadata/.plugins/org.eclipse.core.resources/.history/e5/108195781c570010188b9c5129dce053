@@ -1,0 +1,35 @@
+package innerTest;
+//25qjs : 내부클래스
+public class Outer {
+	//Outer클래스의 필드
+	int var1;
+	String data1 = "Outer";
+	
+	
+	//Outer클래스의 기본 생성자
+	public Outer() {
+		System.out.println("외부 클래스의 기본 생성자");
+	}
+	
+	
+	//Outer클래스의 인스턴스 메소드
+	void outerMethod() {
+		System.out.println("외부 클래스의 메소드 호출");
+	}
+	
+	//내부 클래스 Inner 정의
+	class Inner{
+		//필드, 생성자, 메소드
+		//Inner클래스의 필드
+		int var2 = 10;
+		String data2 = "Inner";
+		
+		//Inner 클래스의 생성자
+		public Inner() {
+			super();
+		}
+		
+		
+	}
+
+}//외부 클래스 중괄호 끝

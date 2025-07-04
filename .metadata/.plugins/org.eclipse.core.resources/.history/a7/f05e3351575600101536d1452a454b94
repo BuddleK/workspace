@@ -1,0 +1,11 @@
+package casting04;
+
+public class Hulk extends Hero{
+	//생성자
+	public Hulk() {
+		super();
+	}
+	
+	//메소드 오버라이딩
+
+}

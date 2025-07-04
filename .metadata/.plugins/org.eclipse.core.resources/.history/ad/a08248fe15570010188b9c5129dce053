@@ -1,0 +1,17 @@
+package interfaceTest06;
+
+public class CeilingFan extends FanAdapter{
+
+	@Override
+	public void on() {
+		System.out.println("천장 선풍기를 on");
+	}
+
+	@Override
+	public void off() {
+		System.out.println("천장 선풍기를 끕니다.");
+	}
+
+
+	
+}

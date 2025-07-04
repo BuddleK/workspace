@@ -1,0 +1,10 @@
+package lambdaTest;
+//6번 : 람다식 만드는 방법
+public class LambdaTest {
+	void printHello() {
+		System.out.println("안녕하세요");
+	}
+	
+	//매개변수x 리턴값x 출력문1개
+//	void printHello() {System.out.println("안녕하세요");}
+}

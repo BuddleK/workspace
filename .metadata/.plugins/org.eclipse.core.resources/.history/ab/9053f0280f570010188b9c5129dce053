@@ -1,0 +1,7 @@
+package interfaceTest05;
+//20번 : static 메소드, default 메소드, private 메소드
+public interface Calculator {
+	default int add(int num1, int num2) {
+		return num1 + num2;
+	}
+}

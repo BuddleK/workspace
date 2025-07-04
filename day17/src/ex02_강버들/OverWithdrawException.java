@@ -1,0 +1,8 @@
+package ex02_강버들;
+
+public class OverWithdrawException extends Exception {
+	//예외 - 출금 금액이 잔액보다 작을 때 호출 예정
+	public OverWithdrawException() {
+		super("잔액이 부족합니다.");
+	}
+}

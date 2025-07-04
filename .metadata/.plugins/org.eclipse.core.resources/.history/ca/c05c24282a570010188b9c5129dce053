@@ -1,0 +1,28 @@
+package mentor;
+
+public class Five4 {
+	public static void main(String[] args) {
+		
+		//로직 구성
+		//)반복문 i(7부터 1까지)
+			//)반복문 j(0부터 7에서 i를 뺀 만큼까지)
+				//) 띄어쓰기 출력
+			//)반복문 끝
+			//)반복문 k(0부터 i에 2를 곱한 만큼까지)
+				//) 별 출력
+			//)만복문 끝
+			//) 엔터 출력
+		//)반복문 끝
+
+		for(int i = 7 ; i > 0;i--) {
+			for(int j = 0 ; j < 7 - i ;j++) {
+				System.out.print(" ");
+			}
+			for(int k = 0 ; k < (2 * i) -1 ;k++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+	}
+}

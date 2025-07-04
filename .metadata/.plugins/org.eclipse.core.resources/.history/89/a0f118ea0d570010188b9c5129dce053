@@ -1,0 +1,17 @@
+package interfaceTest04;
+
+public class ClassC implements Inter1, Inter2, Inter3{
+
+	@Override
+	public void printText() {
+		// TODO Auto-generated method stub
+		Inter1.super.printText();
+	}
+	
+	public static void main(String[] args) {
+		ClassC c = new ClassC();
+		System.out.println(c);
+		c.printText();
+	}
+	
+}

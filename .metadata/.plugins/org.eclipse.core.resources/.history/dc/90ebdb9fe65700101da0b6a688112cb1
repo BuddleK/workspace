@@ -1,0 +1,18 @@
+package practice;
+
+public class Student extends Person{
+	private int sco;
+
+	public Student(String name, int age, int sco) {
+		super(name, age);
+		this.sco = sco;
+	}
+
+	@Override
+	public void score() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}

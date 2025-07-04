@@ -1,0 +1,7 @@
+package casting03;
+//6번 : 캐스팅의 특징
+public class CatingTest {
+	public static void main(String[] args) {
+		Animal animal = new Animal("동물", 2);
+	}
+}

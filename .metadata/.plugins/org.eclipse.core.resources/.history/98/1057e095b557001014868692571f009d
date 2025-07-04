@@ -1,0 +1,26 @@
+package anonymousTest;
+//2번 : 익명 클래스 이용한 객체화
+public class AnimalMain {
+	public static void main(String[] args) {
+		Animal cat = new Animal() {
+
+			@Override
+			public void speak() {
+				System.out.println("야옹");
+			}
+		};
+		System.out.println(cat);
+//		anonymousTest.AnimalMain$1@2ff4acd0
+//		패키지명.클래스명$내부클래스 1 : 익명 클래스 (더 만들면 증가함)
+		
+		Animal dog = new Animal() {
+
+			@Override
+			public void speak() {
+				System.out.println("멍멍");
+			}
+			
+		};//내부클래스 끝
+		System.out.println(dog);
+	}//메인 끝
+}//클래스 끝

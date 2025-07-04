@@ -1,0 +1,35 @@
+package ex03_강버들;
+
+public interface Main {
+	public static void main(String[] args) {
+
+		String nation = "Korea,Spain,Germany,America";
+
+		StringInter sfi = new StringInter() {
+
+			@Override
+			public String modify(String str) {
+				String returnS = "";
+				for (int i = 0; i < str.length(); i++) {
+					char c = str.charAt(i);
+					returnS += c == ',' ? "!" : c;
+				}
+				return returnS;
+			}
+
+		};
+		System.out.println(sfi.modify(nation));
+
+		StringInter sf = (n) -> {
+			String returnS = "";
+			for (int i = 0; i < n.length(); i++) {
+				char c = n.charAt(i);
+				returnS += c == ',' ? "!" : c;
+			}
+			return returnS;
+		};
+		
+		sf.modify(nation);
+
+	}
+}

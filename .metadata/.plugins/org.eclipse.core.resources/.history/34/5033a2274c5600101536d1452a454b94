@@ -1,0 +1,15 @@
+package casting01;
+
+public class TvMain {
+	public static void main(String[] args) {
+		//각각 클래스 객체
+		Tv tv = new Tv();
+		System.out.println(tv);
+//		tv.netflix(); //부모 객체의 값은 자식 클래스에 있는 멤버 사용 불가능
+		tv.powerOnOff();
+		
+		SmartTv smartTv = new SmartTv();
+		System.out.println(smartTv);
+		smartTv.netflix();
+	}
+}

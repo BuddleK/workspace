@@ -1,0 +1,10 @@
+package casting04;
+//7번 : 캐스팅 예제
+public class Main {
+	public static void main(String[] args) {
+		
+		//업캐스팅
+		Hero ironMan = new IronMan("아이언맨");
+		ironMan.superPower();
+	}
+}

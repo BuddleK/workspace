@@ -1,0 +1,13 @@
+package accessModifier04;
+//3번 : final
+public class CarMain {
+	public static void main(String[] args) {
+	
+		Car c = new Car();
+		c.setSpeed(100);
+		
+		System.out.println(c.getSpeed());
+		c.speedUp();
+		
+	}
+}

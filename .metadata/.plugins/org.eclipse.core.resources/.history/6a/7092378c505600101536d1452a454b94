@@ -1,0 +1,14 @@
+package casting03;
+//6번 : 캐스팅의 특징
+public class CatingTest {
+	public static void main(String[] args) {
+		Animal animal = new Animal("동물", 2);
+		System.out.println(animal);
+		animal.crying();
+		
+		//Up casting
+		Animal animal2 = new Dog("바둑이", 3);
+		System.out.println(animal2);
+		animal2.crying();
+	}
+}

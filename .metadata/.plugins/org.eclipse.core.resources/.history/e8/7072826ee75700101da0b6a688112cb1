@@ -1,0 +1,15 @@
+package ex02_강버들;
+
+public class Account {
+	int balance;
+	
+	
+	
+	void withdraw(int m) {
+		
+	}
+	
+	void deposit(int m) {
+		
+	}
+}

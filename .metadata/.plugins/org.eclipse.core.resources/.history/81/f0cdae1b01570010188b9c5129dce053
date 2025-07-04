@@ -1,0 +1,41 @@
+package mentor;
+
+public class SixPractice {
+	public static void main(String[] args) {
+
+		final int AMOUNT_OF_CARD = 10;
+		int[] cards = new int[AMOUNT_OF_CARD];
+		
+		System.out.println("첫 for");
+
+		for (int i = 0; i < cards.length; i++) {
+			System.out.printf("첫 for 시작 : %d\n", i);
+			int num = getRandomNumber(100);
+			System.out.println("num 생성 : " + num);
+			boolean same = false;
+			for(int j = 0;j<i;j++) {
+				if(cards[j] == num) {
+					same = true;
+				}
+				
+				System.out.printf("i : %d, j : %d\n", i, j);
+			}
+			if(same) {
+				i--;
+				same = false;
+			}else {
+				cards[i] = num;
+			}
+		}
+
+		System.out.println("다음 for");
+		for(int num : cards) {
+			System.out.print(num + " ");
+		}
+
+	}
+
+	static int getRandomNumber(int range) {
+		return (int) Math.random() * range + 1;
+	}
+}

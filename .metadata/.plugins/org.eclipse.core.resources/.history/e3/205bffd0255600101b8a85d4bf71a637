@@ -1,0 +1,33 @@
+package ex05_강버들;
+
+public class Student extends Person {
+	
+	int javaScore;
+	int dbmsScore;
+	int htmlScore;
+	Major major;
+	
+	public Student(String name, int javaScore, int dbmsScore, int htmlScore, Major major) {
+		super(name);
+		this.javaScore = javaScore;
+		this.dbmsScore = dbmsScore;
+		this.htmlScore = htmlScore;
+		this.major = major;
+	}
+
+
+	int getTotalScore() {
+		return javaScore + dbmsScore + htmlScore;
+	}
+	
+	int getAverageScore() {
+		return (javaScore + dbmsScore + htmlScore) / 3;
+	}
+	
+	String getMajor() {
+		return this.major.getKoreanName();
+	}
+	
+	
+	
+}

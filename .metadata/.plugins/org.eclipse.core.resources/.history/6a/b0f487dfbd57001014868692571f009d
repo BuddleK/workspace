@@ -1,0 +1,5 @@
+package lambdaTest02;
+
+public interface Func1 {
+
+}

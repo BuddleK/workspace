@@ -1,0 +1,18 @@
+package ex04_강버들;
+
+public class WhileGugudan {
+	public static void main(String[] args) {
+		
+		int i = 1, j;
+		
+		while(i < 10) {
+			j = 2;
+			while(j < 10) {
+				System.out.printf("%d x %d = %d\t", j, i, j * i);
+				j++;
+			}
+			System.out.println();
+			i++;
+		}
+	}
+}

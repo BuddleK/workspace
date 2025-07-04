@@ -1,0 +1,7 @@
+package exceptionTest02;
+
+public class MyExceptionMain {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+	}
+}

@@ -1,0 +1,7 @@
+package lambdaTest;
+//6번 : 람다식 만드는 방법
+public class LambdaTest {
+	void printHello() {
+		System.out.println("안녕하세요");
+	}
+}

@@ -1,0 +1,60 @@
+package mentor;
+
+public class SixPracticeCards {
+	public static void main(String[] args) {
+
+		System.out.println("========3번========");
+		//로직구성
+		//) 카드의 개수를 상수로 선언
+		//) 카드에 적힌 숫자의 범위를 상수로 선언
+		//) 카드 개수만큼 정수형 배열 선언
+		//) 반복문(카드배열의 크기만큼)
+			//) 정수형 변수를 선언해 범위 내에서 랜덤으로 생성한 숫자를 저장
+			//) 중복검사를 할 논리형 플래그 변수를 선언 및 false로 초기화
+			//) 내부 반복문(0부터 바깥의 반복문이 접근한 인덱스의 바로 전 인덱스까지)
+				//) 지금까지 생성하여 저장한 수 중에서 현재 생성한 랜덤값과 일치하는 값을 발견하면 중복검사 플래그에 true를 대입, break으로 중복검사 중단
+			//) 내부 반복문 끝
+			//) if(중복검사 플래그가 true일 때) : i-- (현재 인덱스에 랜덤값을 다시 생성하도록 함)
+			//) else : 현재 인덱스에 대입
+		//) 반복문 끝
+
+		final int AMOUNT_OF_CARD = 10;
+		final int RANGE_OF_CARD = 100;
+		int[] cards = new int[AMOUNT_OF_CARD];
+
+//		System.out.println("첫 for");
+
+		for (int i = 0; i < cards.length; i++) {
+//			System.out.printf("첫 for 시작 i : %d\n", i);
+			int num = getRandomNumber(RANGE_OF_CARD);
+//			System.out.println("num 생성 : " + num);
+			boolean same = false;
+			for (int j = 0; j < i; j++) {
+				if (cards[j] == num) {
+					same = true;
+//					System.out.println("중복~~~~");
+					break;
+				}
+
+//				System.out.printf("i : %d, j : %d\n", i, j);
+			}
+			if (same) {
+				i--;
+				same = false;
+			} else {
+				cards[i] = num;
+			}
+		}
+
+//		System.out.println("다음 for");
+
+		for (int num : cards) {
+			System.out.print(num + " ");
+		}
+
+	}
+
+	static int getRandomNumber(int range) {
+		return (int) (Math.random() * range) + 1;
+	}
+}

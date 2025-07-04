@@ -1,0 +1,11 @@
+package mentor;
+
+public class SixPractice {
+	public static void main(String[] args) {
+		
+	}
+	
+	static int getRandomNumber(int range) {
+		return (int)Math.random() * range + 1;
+	}
+}

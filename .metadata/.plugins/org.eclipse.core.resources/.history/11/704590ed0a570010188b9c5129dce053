@@ -1,0 +1,49 @@
+package mentor;
+
+public class SixPractice {
+	public static void main(String[] args) {
+		
+
+		System.out.println("========3번========");
+
+		final int AMOUNT_OF_CARD = 10;
+		final int RANGE_OF_CARD = 100;
+		int[] cards = new int[AMOUNT_OF_CARD];
+		
+		
+//		System.out.println("첫 for");
+
+		for (int i = 0; i < cards.length; i++) {
+//			System.out.printf("첫 for 시작 i : %d\n", i);
+			int num = getRandomNumber(RANGE_OF_CARD);
+//			System.out.println("num 생성 : " + num);
+			boolean same = false;
+			for(int j = 0;j<i;j++) {
+				if(cards[j] == num) {
+					same = true;
+//					System.out.println("중복~~~~");
+					break;
+				}
+				
+//				System.out.printf("i : %d, j : %d\n", i, j);
+			}
+			if(same) {
+				i--;
+				same = false;
+			}else {
+				cards[i] = num;
+			}
+		}
+
+//		System.out.println("다음 for");
+		
+		for(int num : cards) {
+			System.out.print(num + " ");
+		}
+
+	}
+
+	static int getRandomNumber(int range) {
+		return (int) (Math.random() * range) + 1;
+	}
+}

@@ -1,0 +1,5 @@
+package exceptionTest02;
+//12번 : 예외클래스 메소드
+public class ThrowTest {
+	
+}

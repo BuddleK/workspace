@@ -1,0 +1,13 @@
+package accessModifier01;
+//1번 접근제한자
+public class AccessTarget {
+
+	public AccessTarget() {
+		System.out.println("public 생성자");
+	}
+	//생성자
+	public AccessTarget(String str) {
+		super();
+	}
+	
+}

@@ -1,0 +1,18 @@
+package exceptionTest01;
+
+public class ExceptionTest03 {
+	public static void main(String[] args) {
+		
+	}
+	
+	public void printLength(String data) {
+		try {
+			int result = data.length();
+			System.out.println("글자수 : " + result);
+		}catch(NullPointerException e) {
+			System.out.println("null값은 입력 불가능합니다");
+		}catch(Exception 3) {
+			System.out.println("예상치 못한 오류");
+		}
+	}
+}

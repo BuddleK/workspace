@@ -1,0 +1,47 @@
+package ex02_강버들;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Account {
+	
+	//필드
+	int balance;
+
+	// 생성자
+	public Account(int balance) {
+		super();
+		this.balance = balance;
+	}
+	
+	//메소드
+	
+	//출금 메소드
+	//) 입력 메시지
+	//) 
+	//) 
+	//) 
+	//) 
+	void withdraw(Scanner sc) throws OverWithdrawException, NumberFormatException, InputMismatchException {
+		System.out.print("출금할 금액을 입력하세요 : ");
+		int m = sc.nextInt();
+		if (m <= 0) {
+			throw new NumberFormatException();
+		} else if (m > balance) {
+			throw new OverWithdrawException();
+		}
+		balance -= m;
+		System.out.printf("%d원을 출금합니다.\n잔액은 %d원입니다.\n", m, balance);
+	}
+
+	void deposit(Scanner sc) throws NumberFormatException, InputMismatchException {
+		System.out.print("입금할 금액을 입력하세요 : ");
+		int m = sc.nextInt();
+		if (m <= 0) {
+			throw new NumberFormatException();
+		}
+		balance += m;
+		System.out.printf("%d원을 입금했습니다.\n잔액은 %d원입니다.\n", m, balance);
+	}
+
+}

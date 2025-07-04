@@ -1,0 +1,10 @@
+package ex05_강버들;
+
+import java.util.Scanner;
+
+public class Main {
+	Scanner sc = new Scanner(System.in);
+	
+	
+	sc.close();
+}

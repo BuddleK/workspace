@@ -1,0 +1,12 @@
+package ex04_강버들;
+
+public class WhileGugudan {
+	int i = 1, j = 2;
+	
+	while(i < 10) {
+		
+		
+		System.out.println();
+		i++;
+	}
+}

@@ -1,0 +1,54 @@
+package ex02_강버들;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Account {
+	
+	//필드
+	int balance;
+
+	// 생성자
+	public Account(int balance) {
+		super();
+		this.balance = balance;
+	}
+	
+	//메소드
+	//출금 메소드
+	//) 매개변수 : 스캐너, throws 예외 3개 (출금금액이 잔액보다 큼, 숫자가 이상함(?), 입력 자료형 틀림)
+	//) 입력 메시지
+	//) 금액 입력 받기
+	//) if(입력받은 금액이 0보다 작을 때) : NumberFormatException 예외 발생
+	//) else if(입력받은 금액이 잔액보다 클 때) : OverWithdrawException(사용자 지정) 예외 발생
+	//) 잔액에서 출금값 빼기
+	//) 출금 금액과 잔액 출력
+	void withdraw(Scanner sc) throws OverWithdrawException, NumberFormatException, InputMismatchException {
+		System.out.print("출금할 금액을 입력하세요 : ");
+		int m = sc.nextInt();
+		if (m <= 0) {
+			throw new NumberFormatException();
+		} else if (m > balance) {
+			throw new OverWithdrawException();
+		}
+		balance -= m;
+		System.out.printf("%d원을 출금합니다.\n잔액은 %d원입니다.\n", m, balance);
+	}
+	//입금 메소드
+	//) 매개변수 : 스캐너, throws 예외 개 (숫자가 이상함(?), 입력 자료형 틀림)
+	//) 입력 메시지
+	//) 금액 입력 받기
+	//) if(입력받은 금액이 0보다 작을 때) : NumberFormatException 예외 발생
+	//) 잔액에 입금값 더하기
+	//) 입금 금액과 잔액 출력
+	void deposit(Scanner sc) throws NumberFormatException, InputMismatchException {
+		System.out.print("입금할 금액을 입력하세요 : ");
+		int m = sc.nextInt();
+		if (m <= 0) {
+			throw new NumberFormatException();
+		}
+		balance += m;
+		System.out.printf("%d원을 입금했습니다.\n잔액은 %d원입니다.\n", m, balance);
+	}
+
+}

@@ -1,0 +1,11 @@
+package accessModifier04;
+
+public class SuperCar extends Car{
+
+	//오버라이딩 : alt + shift + s + v
+	@Override
+	void speedUp() {
+		this.setSpeed(getSpeed() + 20);
+	}
+
+}

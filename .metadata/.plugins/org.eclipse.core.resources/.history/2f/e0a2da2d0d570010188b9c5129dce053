@@ -1,0 +1,5 @@
+package interfaceTest04;
+//16번: 다중상속(모호성 해결방법 예제)
+public class ClassB extends ClassA implements Inter1{
+	
+}

@@ -1,0 +1,19 @@
+package exceptionTest02;
+
+import java.util.Scanner;
+
+//14번 : 메소드 선언부에서의 throws
+public class ThrowsTest02 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		sc.close();
+	}
+	
+	static void method() {
+		System.out.println("양수만 입력하세요!!");
+		
+	}
+	
+	
+}

@@ -1,0 +1,12 @@
+package anonymousTest;
+
+public class ClassA implements InterA{
+
+	@Override
+	public void printText() {
+		System.out.println("구현하는클래스에서오버라이딩");
+	}
+	
+	
+
+}

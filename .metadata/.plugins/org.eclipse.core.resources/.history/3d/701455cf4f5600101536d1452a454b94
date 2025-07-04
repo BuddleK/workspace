@@ -1,0 +1,18 @@
+package casting03;
+
+public class Cat extends Animal{
+
+	//생성자
+	public Cat(String name, int age) {
+		super(name, age);
+	}
+
+	@Override
+	void crying() {
+		// TODO Auto-generated method stub
+		super.crying();
+	}
+	
+	//메소드 오버라이딩
+	
+}

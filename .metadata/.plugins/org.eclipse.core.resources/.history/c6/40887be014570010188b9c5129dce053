@@ -1,0 +1,22 @@
+package interfaceTest06;
+// 23번 : 어댑터클래스(메인클래스)
+public class CeilingFanMain {
+	public static void main(String[] args) {
+		Fan cf = new CeilingFan();
+		Fan tf = new TableFan();
+		Fan twf = new TowerFan();
+		
+	}
+	
+	static void showInfo(Fan f) {
+		if(f instanceof CeilingFan) {
+			((CeilingFan)f).on();
+		}else if(f instanceof TableFan) {
+			((TableFan)f).on();
+		}else if(f instanceof TowerFan) {
+			)(TowerFan)f).on();
+		}else {
+			
+		}
+	}
+}

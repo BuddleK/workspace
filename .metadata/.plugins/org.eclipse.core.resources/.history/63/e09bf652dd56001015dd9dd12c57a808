@@ -1,0 +1,24 @@
+package review;
+
+public class Student extends Person{
+	
+	//필드
+	private boolean stu;
+
+	public Student(String name, boolean stu) {
+		super(name); //부모의 생성자
+		this.stu = stu;
+	}
+
+	@Override
+	void introduce() {
+		System.out.println(this.getName() + "은 학생입니다.");
+	}
+	
+	//메소드 오버라이딩
+	
+	
+	//자식클래스의 메소드 추가
+	
+
+}

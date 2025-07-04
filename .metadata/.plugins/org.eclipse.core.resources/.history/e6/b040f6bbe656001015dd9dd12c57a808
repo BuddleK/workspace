@@ -1,0 +1,9 @@
+package abstractTest02;
+//5번 : 추상클래스와 강제성
+public class AnimalMain {
+	public static void main(String[] args) {
+//		Animal animal = new Animal();
+//		미완성된 클래스인 추상 클래스는 객체화 시킬 수 없다
+		
+	}
+}

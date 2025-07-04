@@ -1,0 +1,13 @@
+package casting01;
+//4번 : casting 자식 클래스
+public class SmartTv {
+	//필드
+	boolean power;
+	int ch;
+	int vol;
+	
+	//메소드
+	void powerOnOff() {
+		System.out.println("tv 전원을 켜거나 끕니다");
+	}
+}

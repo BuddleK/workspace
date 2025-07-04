@@ -1,0 +1,6 @@
+package ex03_강버들;
+
+@FunctionalInterface
+public interface StringInter {
+	String modify(String str);
+}

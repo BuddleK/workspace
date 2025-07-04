@@ -1,0 +1,15 @@
+package review;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Person p = new Person("홍길동");
+		Student s = new Student("신짱구", true);
+		printInfo(p);
+	}
+	
+	//static 메소드 정의
+	static void printInfo(Person p) {
+		p.introduce();
+	}
+}

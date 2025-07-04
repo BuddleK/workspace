@@ -1,0 +1,37 @@
+package ex02_강버들;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Account {
+	int balance;
+	
+	//임시
+	int m;
+
+
+	
+	
+	public Account(int balance) {
+		super();
+		this.balance = balance;
+	}
+
+	void withdraw(Scanner sc) {
+		System.out.print("출금할 금액을 입려하세요 : ");
+		int m = sc.nextInt();
+		if(m <= 0) {
+			throw new NumberFormatException();
+		}else if(m > balance) {
+			
+		}
+		balance -= m;
+		System.out.printf("%d원을 출금합니다.\n잔액은 %d원입니다.\n", m, balance);
+		
+	}
+	
+	void deposit(int m) {
+		
+	}
+	
+}

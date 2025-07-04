@@ -1,0 +1,19 @@
+package interfaceTest06;
+
+public abstract class FanAdapter implements Fan{
+
+	@Override
+	public void on() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void off() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
+}

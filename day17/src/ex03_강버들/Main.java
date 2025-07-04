@@ -1,0 +1,52 @@
+package ex03_강버들;
+
+public interface Main {
+	public static void main(String[] args) {
+		//대상 문자열
+		String nation = "Korea,Spain,Germany,America";
+
+		//인터페이스 객체 생성
+		StringInter sfi = new StringInter() {
+			
+			//로직 구성
+			//) 결과문자열 선언 및 초기화
+			//) 반복문(매개변수로 받은 문자열의 크기만큼 반복)
+				//) 현재 인덱스의 문자를 문자형 변수에 대입
+				//) 결과문자열에 - 현재 문자가 ','인 경우 '!'대임, 아닌 경우 그냥 현재 문자 대입
+			//) 반복문 끝
+			//) 결과문자열 반환
+
+			@Override
+			public String modify(String str) {
+				String returnS = "";
+				for (int i = 0; i < str.length(); i++) {
+					char c = str.charAt(i);
+					returnS += c == ',' ? "!" : c;
+				}
+				return returnS;
+			}
+
+		};
+		System.out.println(sfi.modify(nation));
+
+		StringInter sf = (str) -> {
+			
+			//로직 구성
+			//) 결과문자열 선언 및 초기화
+			//) 반복문(매개변수로 받은 문자열의 크기만큼 반복)
+				//) 현재 인덱스의 문자를 문자형 변수에 대입
+				//) 결과문자열에 - 현재 문자가 ','인 경우 '!'대임, 아닌 경우 그냥 현재 문자 대입
+			//) 반복문 끝
+			//) 결과문자열 반환
+			
+			String returnS = "";
+			for (int i = 0; i < str.length(); i++) {
+				char c = str.charAt(i);
+				returnS += c == ',' ? "!" : c;
+			}
+			return returnS;
+		};
+		System.out.println(sf.modify(nation));
+		
+	}
+}

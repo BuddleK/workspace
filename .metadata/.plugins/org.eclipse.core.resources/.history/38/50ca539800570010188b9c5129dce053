@@ -1,0 +1,35 @@
+package mentor;
+
+public class SixPractice {
+	public static void main(String[] args) {
+
+		final int AMOUNT_OF_CARD = 10;
+		int[] cards = new int[AMOUNT_OF_CARD];
+
+		for (int i = 0; i < cards.length; i++) {
+			int num = getRandomNumber(100);
+			boolean same = false;
+			for(int j = 0;j<i;j++) {
+				if(cards[j] == num) {
+					same = true;
+					break;
+				}
+			}
+			if(same) {
+				i--;
+				same = false;
+			}else {
+				cards[i] = num;
+			}
+		}
+		
+		for(int num : cards) {
+			System.out.print(num + " ");
+		}
+
+	}
+
+	static int getRandomNumber(int range) {
+		return (int) Math.random() * range + 1;
+	}
+}

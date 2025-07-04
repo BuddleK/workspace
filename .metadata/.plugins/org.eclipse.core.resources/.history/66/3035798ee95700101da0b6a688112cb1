@@ -1,0 +1,19 @@
+package ex02_강버들;
+
+import java.util.Scanner;
+
+public class AccountMain {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Account p1 = new Account(1000);
+		
+		try {
+			p1.deposit(sc);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		sc.close();
+	}
+}

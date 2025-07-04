@@ -1,0 +1,26 @@
+package ex02_강버들;
+
+import java.util.Scanner;
+
+public class Account {
+	int balance;
+	
+	
+	
+	public Account(int balance) {
+		super();
+		this.balance = balance;
+	}
+
+	void withdraw(Scanner sc) {
+
+		System.out.print("출금할 금액을 입력해 주세요 : ");
+		int m = sc.nextInt();
+			
+
+	}
+	
+	void deposit(int m) {
+		
+	}
+}

@@ -1,0 +1,7 @@
+package accessModifier03;
+//2번 : private 접근제한자
+public class Person {
+	//필드
+	private String name;
+	private int age;
+}

@@ -1,0 +1,25 @@
+package interfaceTest03;
+
+class Parents{
+	void parentsMethod() {
+		System.out.println("Parents 클래스의 메소드");
+	}
+}
+
+interface InterA{
+	void interMethod1();
+}
+
+interface InterB{
+	void interMethod2();
+}
+
+class Child extends Parents{
+	
+}
+
+public class Main4 {
+	public static void main(String[] args) {
+		
+	}
+}

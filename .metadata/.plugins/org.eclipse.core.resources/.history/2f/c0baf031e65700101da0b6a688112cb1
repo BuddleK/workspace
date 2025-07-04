@@ -1,0 +1,12 @@
+package practice;
+
+public class Student extends Person{
+	private int sco;
+
+	public Student(String name, int age, int sco) {
+		super(name, age);
+		this.sco = sco;
+	}
+	
+	
+}

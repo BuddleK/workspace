@@ -1,0 +1,52 @@
+package mentor;
+
+public class SixPracticeMagicSquare {
+
+	public static void main(String[] args) {
+
+		System.out.println("========4번========");
+		//로직구성
+		//) 
+
+		final int SQUARE = 5; // 3, 7, 5, 9 ... 홀수로만 지정 가능
+		int[] arr = new int[SQUARE * SQUARE];
+		int[][] square = new int[SQUARE][SQUARE];
+		int x = 0, y = 2;
+
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = i + 1;
+		}
+
+		for (int i = 0; i < SQUARE * SQUARE; i++) {
+			square[x][y] = arr[i];
+
+			if (i % SQUARE == SQUARE - 1) {
+				x++;
+			} else {
+				x--;
+				y++;
+			}
+
+			if (x == -1) {
+				x = SQUARE - 1;
+			}
+			if (x == SQUARE) {
+				x = 0;
+			}
+			if (y == SQUARE) {
+				y = 0;
+			}
+		}
+
+		for (int i = 0; i < square.length; i++) {
+			int[] ar = square[i];
+			int sum = 0;
+			for (int j = 0; j < ar.length; j++) {
+				System.out.printf("%02d ", ar[j]);
+				sum += ar[j];
+			}
+			System.out.println();
+		}
+
+	}
+}

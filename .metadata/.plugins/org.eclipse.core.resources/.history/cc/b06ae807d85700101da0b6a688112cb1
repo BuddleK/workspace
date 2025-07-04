@@ -1,0 +1,12 @@
+package exceptionTest01;
+//11번 : Exception Basic
+public class ExceptionTest02 {
+	public static void main(String[] args) {
+		
+	}
+	
+	public void printLength(String data) {
+		int result = data.length();
+		System.out.println(data + "의 글자 수는 " + result + " 입니다.");
+	}
+}

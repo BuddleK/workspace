@@ -1,0 +1,5 @@
+package ex03_강버들;
+
+public interface Main {
+
+}

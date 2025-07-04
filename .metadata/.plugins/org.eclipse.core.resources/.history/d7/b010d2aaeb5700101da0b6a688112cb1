@@ -1,0 +1,18 @@
+package ex03_강버들;
+
+public interface Main {
+	public static void main(String[] args) {
+		
+		String nation = "Korea,Spain,Germany,America";
+		
+		StringInter sfi = new StringInter() {
+
+			@Override
+			public String modify(String str) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+			
+		};
+	}
+}

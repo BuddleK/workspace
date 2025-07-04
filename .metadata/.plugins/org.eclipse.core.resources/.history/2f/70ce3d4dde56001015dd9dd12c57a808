@@ -1,0 +1,12 @@
+package review;
+
+public class Main {
+	public static void main(String[] args) {
+		
+	}
+	
+	//static 메소드 정의
+	static void printInfo(Person p) {
+		p.introduce();
+	}
+}

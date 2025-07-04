@@ -1,0 +1,11 @@
+package exceptionTest01;
+
+public class ExceptionTest03 {
+	public static void main(String[] args) {
+		
+	}
+	
+	public void printLength(String data) {
+		int result = data.length();
+	}
+}

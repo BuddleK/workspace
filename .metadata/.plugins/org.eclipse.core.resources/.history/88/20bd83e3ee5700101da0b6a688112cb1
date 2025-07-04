@@ -1,0 +1,27 @@
+package ex02_강버들;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class AccountMain {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Account p1 = new Account(1000);
+
+		try {
+			p1.withdraw(sc);
+		} catch (NumberFormatException | InputMismatchException | OverWithdrawException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		try {
+			p1.deposit(sc);
+		} catch (NumberFormatException | InputMismatchException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		sc.close();
+	}
+}

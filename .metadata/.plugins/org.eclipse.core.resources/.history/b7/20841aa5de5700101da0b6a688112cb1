@@ -1,0 +1,7 @@
+package exceptionTest02;
+//13번 : throws와 throw
+public class ThrowTest {
+	public static void main(String[] args) {
+		
+	}
+}

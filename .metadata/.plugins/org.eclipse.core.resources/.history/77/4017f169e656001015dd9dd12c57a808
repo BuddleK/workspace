@@ -1,0 +1,10 @@
+package abstractTest02;
+//5번 : 추상클래스와 강제성
+public class Cat extends Animal{
+
+	@Override
+	void crying() {
+		// TODO Auto-generated method stub
+		
+	}
+}

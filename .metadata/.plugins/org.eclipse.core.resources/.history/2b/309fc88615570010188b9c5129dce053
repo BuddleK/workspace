@@ -1,0 +1,6 @@
+package interfaceTest06;
+
+public abstract class FanAdapter implements Fan{
+	
+
+}

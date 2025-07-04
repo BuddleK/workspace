@@ -1,0 +1,100 @@
+package ex05_강버들;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		//로직구성
+		//)스캐너 임포트
+		//)정수형 변수(입력받을 머릿수) 선언 및 초기화
+		//)문자열 (학생 이름, 전공) 선언 및 초기화
+		//)정수형 변수(자바, DB, HTML 점수 저장 공간) 선언 및 초기화
+		//)enum을 보관할 변수 선언 및 초기화
+		//) 반복문 (입력받은 머릿수가 0이 아닐 때까지)
+			//) 입력메시지
+			//) 머릿수 입력
+			//) 버퍼 비우기
+			//) if(머릿수가 0보다 작거나 같다면)
+				//) 잘못 입력한 것 같습니다. 다시 입력하세요 출력;
+				//) 머릿수 변수 (무슨 값이 들어있을지 모르니) 0으로 초기화
+		//) 반복문 종료
+		//) 머릿수 만큼의 Student 객체 배열 선언
+		//) 반복문(머릿수 만큼)
+			//) 입력메시지와 함게 각각의 정보들 입력
+			//) if-else if(입력받은 전공에 따른 Major 상수 생성), 잘못 입력한 경우 i-- 하고 조건문으로 돌아감
+			//) 위에서 입력받거나 생성한 정보들로 Student 객체 생성하여 배열에 대입
+		//) 반복문 끝
+		//) 성적 출력
+		//)스캐너 해제
+		
+		
+		Scanner sc = new Scanner(System.in);
+
+		int people = 0;
+		String name = "", major = "";
+		int java = 0, dbms = 0, html = 0;
+		
+		Major m = null;
+
+		while (people == 0) {
+			System.out.print("몇 명의 학생을 입력하시겠습니까? ");
+			people = sc.nextInt();
+			sc.nextLine();
+			if (people <= 0) {
+				System.out.println("잘못 입력한 것 같습니다. 다시 입력해 주세요.");
+				people = 0;
+			}
+		}
+		
+		Student[] sArr = new Student[people];
+
+		for (int i = 0; i < people; i++) {
+			System.out.printf("[%d번째 학생 정보 입력]\n", i + 1);
+
+			System.out.print("이름 : ");
+			name = sc.nextLine();
+		
+			System.out.print("전공(COMPUTER_SCIENCE, CYBER_SECURITY, ARTIFICIAL_INTELLIGENCE) : ");
+			major = sc.nextLine();
+			System.out.print("Java 점수 : ");
+			java = sc.nextInt();
+			sc.nextLine();
+			System.out.print("DBMS 점수 : ");
+			dbms = sc.nextInt();
+			sc.nextLine();
+			System.out.print("HTML 점수 : ");
+			html = sc.nextInt();
+			sc.nextLine();
+			System.out.println();
+			
+			if(major.equals("COMPUTER_SCIENCE")) {
+				m = Major.COMPUTER_SCIENCE;
+			}else if(major.equals("CYBER_SECURITY")) {
+				m = Major.CYBER_SECURITY;
+			}else if(major.equals("ARTIFICIAL_INTELLIGENCE")) {
+				m = Major.ARTIFICIAL_INTELLIGENCE;
+			}else {
+				System.out.println("잘못 입력했습니다. 다시 입력하세요.");
+				i--;
+				continue;
+			}
+			
+			
+			
+			sArr[i] = new Student(name, java, dbms, html, m);
+			
+		}
+		
+		System.out.println("===== 성적 출력 =====");
+		
+		for(int i = 0;i < people ;i++) {
+			System.out.printf("%s님의 전공은 %s입니다.\n", sArr[i].name, sArr[i].getMajor());
+			System.out.println("총점 : " + sArr[i].getTotalScore() + "점");
+			System.out.println("평균 : " + sArr[i].getAverageScore() + "점");
+			System.out.println();
+		}
+
+		sc.close();
+	}
+}
