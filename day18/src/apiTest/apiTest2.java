@@ -1,10 +1,10 @@
 package apiTest;
 
-import apiTest21.Calc1;
+import apiTest2.Calc;
 
 public class apiTest2 {
 	public static void main(String[] args) {
-		Calc1 cal = new Calc1();
+		Calc cal = new Calc();
 		System.out.println(cal.divide(10, 1));
 	}
 }

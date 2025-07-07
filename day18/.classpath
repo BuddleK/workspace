@@ -6,6 +6,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry exported="true" kind="lib" path="D:/web_0900_kbd/java/workspace/Calcul/Calc.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
