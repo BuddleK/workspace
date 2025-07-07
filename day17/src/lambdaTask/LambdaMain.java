@@ -9,7 +9,7 @@ public class LambdaMain {
 //		메인메소드에서 익명클래스로 객체화
 //		메인메소드에서 람다식으로 객체화
 
-		CombInter comb1 = new CombInter() {
+		CombInter1 comb1 = new CombInter1() {
 
 			@Override
 			public String comb(String str1, String str2) {
@@ -21,7 +21,7 @@ public class LambdaMain {
 		System.out.println(comb1.comb("냠", "냠"));
 		
 		
-		CombInter comb2 = (str1, str2) -> str1 + str2;
+		CombInter1 comb2 = (str1, str2) -> str1 + str2;
 		System.out.println(comb2);
 		System.out.println(comb2.comb("크", "헉"));
 

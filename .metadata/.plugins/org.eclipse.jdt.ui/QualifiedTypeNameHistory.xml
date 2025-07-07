@@ -4,7 +4,6 @@
     <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthOptionPaneUI"/>
     <fullyQualifiedTypeName name="method.MethodOverloading02"/>
     <fullyQualifiedTypeName name="accessModifier01.Parents"/>
     <fullyQualifiedTypeName name="java.util.concurrent.ForkJoinPool.ManagedBlocker"/>
@@ -12,4 +11,10 @@
     <fullyQualifiedTypeName name="innerTest.Outer.Inner"/>
     <fullyQualifiedTypeName name="lambdaTest02.Func1"/>
     <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="apiTest21.Calc1"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthOptionPaneUI"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Map.Entry"/>
 </qualifiedTypeNameHistroy>
